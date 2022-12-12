@@ -13,8 +13,29 @@
 	<link href='https://fonts.googleapis.com/css?family=Titillium Web' rel='stylesheet'>
       <style>
 @charset "UTF-8";
+/* Body */
+body {
+ 	font-family: 'Titillium Web';
+  	font-style: normal;
+  	font-weight: 400;
+  	background-color: #f2f2f2;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	font-style: normal;
+	font-weight: 200;
+}
+/* Container */
 .container {
-	background-color: #20222A;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 1000px;
+	background-color: #FFFFFF;
+}
+.containers {
+	background-color: #000000;
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
@@ -23,63 +44,85 @@
 	padding-top: 0px;
 	padding-right: 0px;
 	padding-bottom: 0px;
+	
 }
-.row {
+/* Navigation */
+header {
 	width: 100%;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	padding-top: 0px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	display: inline-block;
-	background-color: #20222A;
+	height: 5%;
+	background-color: #06768D;
+	border-bottom: 1px solid #373737;
 }
-.row.blockDisplay {
-	display: block;
+	      
+a{
+  position: relative;
+  display: inline-block;
+  color: #00D4FF;
+  text-decoration: none;
+  padding: 8px 30px;
+  overflow: hidden;
+  transition: 0.2s;
 }
 
-.column_half {
-	width: 50%;
-	float: left;
-	margin-top: 0px;
+a span{
+  position: absolute;
+  display: block;
 }
-.columns {
-	width: 25%;
-	float: left;
-	font-family: 'Agency FB';
-	font-weight: Bold;
-	color: #A5A5A5;
+a span:nth-child(1)  {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,#00D4FF);
 }
-.row .columns p {
-	padding-left: 10%;
-	padding-right: 10%;
+a:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
 }
-.container .columns h4 {
-	font-size: 35px;
-	font-weight: Bold;
-	text-align: center;
-	color: #01B2D1;
+a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,#00D4FF);
 }
-.primary_header {
-	width: 100%;
-	background-color: #20222A;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	clear: left;
-	border: 3px solid #14C2C9;
+a:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,#00D4FF);
+}
+a:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,#00D4FF);
+}
+a:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
 }
 .secondary_header {
 	width: 100%;
-	padding-top: 30px;
-	padding-bottom: 30px;
-	background-color: #20222A;
-	border: 3px solid #14c2c9;
+	padding-top: 15px;
+	background-color: #151C1F;
 	clear: left;
 	position: fixed;
-	z-index: 5;
+	z-index: 100;
+	opacity: 1
 }
 .container .secondary_header ul {
 	margin-top: 0%;
@@ -88,444 +131,591 @@
 	margin-left: auto;
 	padding-top: 0px;
 	padding-right: 0px;
+	padding-bottom: 15px;
 	padding-left: 0px;
-	width: 100%;
-	list-style-type:none;
-  	display:flex;
-  	justify-content: center;
+	width: 60%;
 }
 .secondary_header ul li {
 	list-style: none;
-	font-family: "Agency FB";
-	font-weight: Bold;
-	font-size: 28px;
-	
+	font-size: 22px;
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-top: 0px;
+	font-family: "Titillium Web";
+	font-weight: normal;
+	color: #006DA0;
+	letter-spacing: 1px;
+	margin-left: auto;
+	text-align: center;
+	transition: all 0.3s linear;
+	float: right;
+}
+ .secondary_header ul ll {
+	list-style: none;
+	font-size: 25px;
+	margin-right: 50px;	 
+	margin-left: 50px;
+	margin-top: 0px;
+	font-family: "Titillium Web";
+	font-weight: normal;
+	color: #006DA0;
+	letter-spacing: 1px;
+	text-align: center;
+	transition: all 0.3s linear;
 	float: left;
-	margin-right: auto;
-	color: #14C2C9;
-	transition: all 0.1s linear;
-	display: list-item;
-  	padding: 0px 20px;
- 	margin: 0 3px;
-}
-.secondary_header ul li:hover {
-	color: #FFFFFF;
-	cursor: pointer;
-}
-.left_article {
-	width: 60%;
-	float: left;
-	font-family: "Agency FB";
-	font-weight: Bold;
-	color: #FFFFFF;
-	padding-bottom: 15px;
-	background-color: #20222A;
-	height: 560px;
-}
-.noDisplay {
-	display: none;
-}
-.container .left_article h3 {
-	padding-left: 5%;
-	padding-right: 5%;
-	margin-top: 5%;
-	font-size: 40px;
-	color: #FFFFFF;
+ }
+.logo {
+	color: #fff;
 	font-weight: bold;
-	text-transform: uppercase;
-}
-.container .left_article p {
-	padding-left: 5%;
-	padding-right: 5%;
-	line-height: 45px;
-	margin-top: 30px;
-	font-size: 32px;
-	margin-bottom: 15px;
-	color: #FFFFFF;
-}
-.right_article {
-	width: 40%;
+	text-align: undefined;
+	width: 10%;
 	float: left;
-	background-color: #20222A;
+	margin-top: 15px;
+	margin-left: 25px;
+	letter-spacing: 3px;
 }
-.container .right_article ul {
+
+.hero_header {
+	color: #FFFFFF;
+	text-align: center;
 	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-left: 0px;
-	padding-top: 0px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
+	letter-spacing: 0px;
 }
-.right_article ul li {
-	font-family: "Source Sans Pro";
-	list-style: none;
-	text-align: center;
-	background-color: #B3B3B3;
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	padding-top: 15px;
-	padding-bottom: 15px;
+/* Hero Section */
+.hero {
+	background-color:  #11202B;
+	padding-top: 50px;
+	padding-bottom: 25px;	
+	font-size: 28px;
+}
+.skills {
+	background-color: #F2F2F2;
+	padding-top: 50px;
+	padding-bottom: 50px;	
+	font-size: 28px;
+}
+.light {
+	font-weight: bold;
 	color: #FFFFFF;
-	font-weight: bold;
-	border-radius: 0px;
-	transition: all 0.3s linear;
-	border-left: 5px solid #717070;
 }
-.right_article ul li:hover {
-	background-color: #717070;
-	cursor: pointer;
-}
-.footer {
-	background-color: #717070;
-}
-.title {
-	font-weight: bold;
-	font-style: normal;
-	font-family: "Source Sans Pro";
+.tagline {
 	text-align: center;
 	color: #FFFFFF;
-	letter-spacing: 2px;
+	margin-top: 4px;
+	font-weight: lighter;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
-.placeholder {
+/* About Section */
+.text_column {
+	width: 29%;
+	text-align: justify;
+	font-weight: lighter;
+	line-height: 25px;
+	float: left;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: #FFFFFF;
+}
+.about {
+	padding-left: 120px;
+	padding-right: 25px;
+	padding-top: 35px;
+	display: inline-block;
+	background-color: #222222;
+	margin-top: 0px;
+}
+/* Stats Gallery */
+.stats {
+	color: #FFFFFF;
+	margin-bottom: 5px;
+}
+.gallery {
+	clear: both;
+	display: inline-block;
 	width: 100%;
-	height: 100%;
+	background-color: #00CED1;
+	/* [disabled]min-width: 400px;
+*/
+	padding-bottom: 165px;
+	padding-top: 150px;
+	margin-top: -7px;
+	margin-bottom: 0px;
 }
-.left_half {
-	background-color: #52BAD5;
+.thumbnail {
+	width: 25%;
+	text-align: center;
+	float: left;
+	margin-top: 35px;
 }
-.container .column_half.left_half h2 {
+.gallery .thumbnail h4 {
+	margin-top: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
 	color: #FFFFFF;
-	font-family: "Source Sans Pro";
+}
+.gallery .thumbnail p {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	color: #A3A3A3;
+}
+/* Parallax Section */
+.banner {
+	background-color: #333044;
+	background-image: url(../images/parallax.png);
+	height: 200px;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.parallax {
+	color: #FFFFFF;
+	text-align: right;
+	padding-right: 100px;
+	padding-top: 75px;
+	letter-spacing: 2px;
+	margin-top: -7px;
+}
+.parallax_description {
+	color: #FFFFFF;
+	text-align: right;
+	padding-right: 100px;
+	width: 30%;
+	float: right;
+	font-weight: lighter;
+	line-height: 23px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+/* More info */
+footer {
+	background-color: #222222;
+	padding-bottom: 35px;
+}
+.footer_column {
+	width: 50%;
+	text-align: center;
+	padding-top: 30px;
+	float: left;
+}
+footer .footer_column h3 {
+	color: #B3B3B3;
 	text-align: center;
 }
-.right_half {
-	background-color: #01B2D1;
+footer .footer_column p {
 	color: #FFFFFF;
-	font-family: "Source Sans Pro";
-	text-align: center;
-	font-weight: bold;
+	background-color: #222222
 }
-.column_title {
-	padding-top: 25px;
-	padding-bottom: 25px;
+.cards {
+	width: 100%;
+	height: 600px;
+	max-width: 400px;
+	max-height: 200px;
+}
+footer .footer_column p {
+	padding-left: 30px;
+	padding-right: 30px;
+	text-align: justify;
+	line-height: 25px;
+	font-weight: lighter;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+.button {
+	background-color: #4CAF50;
+  	border: none;
+  	width: 200px;
+  	padding: 15px 32px;
+  	text-align: center;
+  	background-color: #1F1F1F;
+  	transition: all 0.3s linear;
+	margin-top: 20px;
+	margin: auto;
+  	color: #FFFFFF;	
+  	border: 3px solid #FFFFFF;
+  	letter-spacing: 2px;
+  	font-weight: bold;
+  	vertical-align: middle;
+  	text-transform: uppercase;
+  	border-radius: 0px;
+  	text-decoration: none;
+  	display: block;
+  	font-size: 16px;
+  	cursor: pointer;
+}
+.button:hover {
+	background-color: #CDCDCD;
+	color: #000000;
+	cursor: pointer;
 }
 .copyright {
 	text-align: center;
-	background-color: #717070;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #11202B;
 	color: #FFFFFF;
 	text-transform: uppercase;
 	font-weight: lighter;
 	letter-spacing: 2px;
 	border-top-width: 2px;
-	font-family: "Source Sans Pro";
 }
-body {
-	margin-top: 0px;
-	margin-right: 0px;
+.footer_banner {
+	background-color: #06768D;
+	padding-top: 60px;
+	padding-bottom: 30px;
+	padding-right: 25px;
+	padding-left: 25px;
+	text-align: justify;
 	margin-bottom: 0px;
-	margin-left: 0px;
+	background-repeat: repeat;
+	font-size: 20px;
 }
-body::-webkit-scrollbar{
+.footer_bannr {
+	background-color: #06768D;	
+	color: #FFFFFF;
+	margin: auto;
+	width: 60%;
+	padding-top: 15px;
+	padding-bottom: 30px;
+	padding-right: 25px;
+	padding-left: 25px;
+	text-align: center;
+	margin-bottom: 0px;
+	background-repeat: repeat;
+	font-size: 18px;
+}	
+.footer_bannr2 {
+	background-color: #222222;	
+	color: #FFFFFF;
+	margin: auto;
+	width: 40%;
+	padding-top: 5px;
+	padding-bottom: 20px;
+	padding-right: 25px;
+	padding-left: 25px;
+	text-align: center;
+	margin-bottom: 0px;
+	background-repeat: repeat;
+	font-size: 24px;
+}
+footer {
+	display: inline-block;
+}
+.hidden {
 	display: none;
 }
-@media (max-width: 320px) {
-.secondary_header ul li {
-	float: none;
-	margin-top: 28px;
-	margin-left: 0px;
-	width: 100%;
+.setting {
+	width: 93%;
+	height: 93%;
+	max-width: 2400px;
+	max-height: 3200px;
 }
-.container .secondary_header ul {
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	padding-top: 0px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	height: auto;
-	width: 100%;
-	text-align: center;
-}
-.secondary_header {
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	padding-top: 1px;
-	padding-bottom: 40px;
-}
-.left_article {
-	width: 100%;
-	height: auto;
-}
-.right_article {
-	width: 100%;
-	height: auto;
-}
-.placeholder {
-	width: 100%;
-	margin-top: 22PX;
-	margin-right: 0px;
-	margin-bottom: 22PX;
-	margin-left: 0px;
-	padding-top: 0px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	max-width: 400px;
-	max-height: 200px;
-	height: auto;
-}
-.columns {
-	width: 100%;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	padding-top: 0PX;
-	padding-right: 0PX;
-	padding-bottom: 0PX;
-	padding-left: 0PX;
-}
-.columns p {
-	padding-left: 10px;
-	padding-right: 10px;
-}
-.column_half.left_half {
-	width: 100%;
-}
-.column_half.right_half {
-	width: 100%;
-}
-.copyright {
-	padding-top: 25px;
-	padding-bottom: 0px;
-	margin-bottom: 0px;
-}
-.container .left_article h3 {
-	margin-top: 30px;
-}
-.social .social_icon img {
-	width: 80%;
-}
-.container .secondary_header {
-}
-}
-
-@media (min-width: 321px) and (max-width: 768px) {
-.secondary_header ul li {
-	float: none;
-	margin-top: 28px;
-	margin-left: 0px;
-	width: 100%;
-}
-.container .secondary_header ul {
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	padding-top: 0px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	height: auto;
-	width: 100%;
-	text-align: center;
-}
-.secondary_header {
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	padding-top: 1px;
-	padding-bottom: 40px;
-}
-.left_article {
-	width: 100%;
-	height: auto;
-}
-.right_article {
-	width: 100%;
-	height: auto;
-	padding-bottom: 25px;
-}
-.placeholder {
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	padding-top: 0px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	width: 100%;
-	max-width: 100%;
-	height: auto;
-	max-height: 100%;
-}
-.columns {
-	width: 100%;
-	margin-top: 6px;
-	margin-right: 0px;
-	margin-bottom: 6px;
-	margin-left: 0px;
-	padding-top: 0px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-}
-.columns p {
-	padding-left: 14px;
-	padding-right: 14px;
-}
-.column_half.left_half {
-	width: 100%;
-}
-.column_half.right_half {
-	width: 100%;
-}
-}
-
-@media (min-width: 769px) and (max-width: 1000px) {
-.secondary_header {
-	overflow: auto;
-	padding-top: 30px;
-	padding-bottom: 30px;
-}
-.secondary_header ul li {
-	margin-top: 10px;
-	margin-right: 7%;
-	margin-bottom: 10px;
-	margin-left: 7%;
-}
-.left_article {
-	height: auto;
-}
-.right_article {
-	height: auto;
-	padding-bottom: 27px;
-}
-.placeholder {
-	width: 100%;
-	margin-left: 0px;
-	margin-right: 0px;
-	padding-left: 0px;
-	padding-right: 0px;
-}
-.columns {
+.sett{
+	display: block;
+    	margin-left: auto;
+    	margin-right: auto;
 	width: 50%;
+}
+	      ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+
+.box{
+	width: 350px;
+	height: 710px;
+	background-color: #1B1C1C;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	box-sizing: border-box;
+	margin: 5px 5px;
+}
+.containerform{
+	padding-top: 50px;
+	width: 100%;
+	height: 800px;
+	background-color: #11202B;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.model
+{
+	height: 350px;
+	max-width: 100%;
+}
+.models
+{
+	padding-top: 25px;
+	height: 40px;
+	padding-bottom: 10px;
+	max-width: 100%;
+	padding-bottom: 10px
+}
+.models2
+{
+	padding-top: 25px;
+	height: 50px;
+	max-width: 100%;
+	padding-bottom: 10px
+}
+.models3
+{
+	padding-top: 25px;
+	height: 40px;
+	max-width: 100%;
+	padding-bottom: 10px
+}
+.models4
+{
+	padding-top: 0px;
+	height: 100px;
+	width: 300px;
+	padding-bottom: 10px;
+}
+.models5
+{
+	padding-top: 0px;
+	height: 90px;
+	width: 240px;
+	padding-bottom: 10px;
+}
+.details
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 300px;
+}
+.details p
+{
+	font-family: Titillium Web;
+	font-weight: bold;
+	color: #6a6a74;
+	text-align: center;
+	margin-top: 20px;
+}
+.programming
+{
+	color: #32323e;
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-family: Titillium Web;
+	font-size: 28px;
+}
+.logor
+{
+	margin-top: 15px;
+	height: 60px;
+}
+.box:hover{
+	background-color: #17171D;
+	transform-style: preserve-3d;
+	transform: scale(1.02);
+	transition: all ease 0.3s;
+}
+.box:hover .programming{
+	color: #479BAC;
+	transition: all ease 0.5s;
+}
+
+/* Mobile */
+@media (max-width: 320px) {
+nav {
+	float: right;
+	width: 100%;
+	text-align: center;
+	margin-right: 0px;
+}
+.logo {
+	width: 100%;
+	text-align: center;
 	float: left;
-	padding-left: 0px;
+	margin-top: 13px;
+	margin-left: 0px;
+	color: #FFFFFF;
+}
+.text_column {
+	width: 100%;
+	text-align: left;
 	padding-top: 0px;
 	padding-right: 0px;
 	padding-bottom: 0px;
-}
-.container .columns p {
-	padding-left: 25px;
-	padding-right: 25px;
-}
-}
-
-@media (min-width: 1001px) {
+	padding-left: 0px;
 }
 .thumbnail {
-	width: 100px;
-	border-radius: 20px;
-	height: 100px;
-	margin-left: auto;
+	width: 100%;
 }
-.thumbnail_align {
+.footer_column {
+	width: 100%;
+	margin-top: 0px;
+}
+.parallax {
+	text-align: center;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 40%;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	width: 100%;
+	font-size: 18px;
+}
+.parallax_description {
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	margin-top: 30%;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	float: none;
+	width: 100%;
 	text-align: center;
 }
-.social {
-	text-align: center;
+.thumbnail {
+	width: 50%;
+}
+.parallax {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-top: 20%;
+}
+.parallax_description {
+	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-left: 0px;
 	width: 100%;
-	background-color: #414141;
-	clear: both;
-	overflow: auto;
+	padding-top: 30px;
 }
-.social_icon {
-	width: 25%;
+.banner {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.footer_column {
+	width: 100%;
+}
+}
+
+/* Small Tablets */
+@media (min-width: 321px)and (max-width: 767px) {
+nav {
+	float: right;
+	width: 60%;
+	text-align: right;
+	margin-right: 0px;
+}
+.logo {
+	width: 20%;
+	margin-left: 10px;
+	text-align: left;
+	margin-top: 13px;
+	color: #FFFFFF;
+}
+.text_column {
+	width: 100%;
+	text-align: left;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+.thumbnail {
+	width: 100%;
+}
+.footer_column {
+	width: 100%;
+	margin-top: 0px;
+}
+.parallax {
 	text-align: center;
-	float: left;
-	transition: all 0.3s linear;
-	line-height: 0px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-.container .social .social_icon:hover {
-	cursor: pointer;
-	opacity: 0.5;
-}
-#menu {
-}
-
-
-.BImage {
-	background-image: url("../BackGroundGalaxy.png");
-	height: 1333px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 40%;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
 	width: 100%;
+	font-size: 18px;
 }
-.FImage {
-	background-image: url("../SD.png");
+.parallax_description {
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	margin-top: 30%;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	float: none;
 	width: 100%;
-	height: 100%;
-}
-
-.midcontainer {
-	padding-top: 280px;
-	margin-left: auto; 
-	margin-right: auto; 
-	width: 80%;
-	color: #14C2C9;
-	font-family: "Agency FB";
-	font-weight: Bold;
-	font-size: 90px;
-}
-
-.lowercontaner {
-	padding-top: -15px;
-	margin-left: 10%; 
-	margin-right: auto; 
-	width: 40%;
-	color: #14C2C9;
-	font-family: "Agency FB";
-	font-weight: Bold;
-	font-size: 60px;
-}
-.photo {
-	padding-top: 142px;
-}
-
-.thumbnail1 {
-	width: 100%;
-	border-radius: 20px;
-	height: 100%;
-	margin-left: auto;
-}
-
-.GameTitle {
-	font-size: 20px;
-}
-
-p {
-	font-size: 25px;
 	text-align: center;
 }
-
-.row2 {
+.thumbnail {
+	width: 50%;
+}
+.parallax {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-top: 20%;
+}
+.parallax_description {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
 	width: 100%;
-	margin-top: -10px;
+	padding-top: 30px;
+}
+.banner {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.footer_column {
+	width: 100%;
+}
+}
+
+/* Small Desktops */
+@media (min-width: 768px) and (max-width: 1096px) {
+.text_column {
+	width: 100%;
+}
+.thumbnail {
+	width: 50%;
+}
+.text_column {
+	width: 100%;
+	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-left: 0px;
@@ -533,264 +723,31 @@ p {
 	padding-right: 0px;
 	padding-bottom: 0px;
 	padding-left: 0px;
-	display: inline-block;
-	background-color: #20222A;
 }
-
-.columns2 {
+.banner {
+	margin-top: 0px;
+	padding-top: 0px;
+}
+}
+.center {
+    	display: inline-block;
+    	margin-left: auto;
+    	margin-right: auto;
 	width: 50%;
-	float: left;
-	font-family: 'Agency FB';
-	font-weight: Bold;
-	color: #A5A5A5;
+	max-height: 400px;
+	max-width: 400px;
+	padding: 25px 150px;
 }
+#images{
+    text-align:center;
+}
+      </style>
+<link href="file:///C|/Users/Joe/AppData/Roaming/Adobe/Dreamweaver CC 2017/en_US/Configuration/Temp/Assets/eamC8.tmp/css/singlePageTemplate.css" rel="stylesheet" type="text/css">
+<link href="style.css" rel="stylesheet" type="text/css">     
 
-.thumbnail2 {
-	width: 55%;
-}
-
-.PersonalHeader {
-	height: 75px;
-	text-align: left;
-	background-color: #14C2C9;
-}
-
-.PersonalHeader p {
-	font-size: 30px;
-	text-align: left;
-	line-height: 65px;
-	color: #FFFFFF;
-	font-family: "Agency FB";
-	font-weight: Bold;
-	margin-left: 25px;
-}
-
-.PersonalHeader2 {
-	margin-top: -35px;
-	height: 75px;
-	text-align: left;
-	background-color: #14C2C9;
-}
-
-.PersonalHeader2 p {
-	font-size: 30px;
-	text-align: left;
-	line-height: 75px;
-	color: #FFFFFF;
-	font-family: "Agency FB";
-	font-weight: Bold;
-	margin-left: 25px;
-}
-.gallery {
-	display: inline-block;
-	width: 100%;
-	background-color: #20222A;
-	padding-bottom: 0px;
-	padding-top: 50px;
-	padding-bottom: 100px;
-	margin-bottom: 0px;
-}
-.gallery .thumbnails h4 {
-	margin-top: 5px;	
-	font-weight: Bold;
-	margin-right: 5px;
-	margin-bottom: 5px;
-	margin-left: 5px;
-	color: #14C2C9;
-	font-family: "Agency FB";
-	font-size: 30px;
-}
-.gallery .thumbnails p {
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	color: #A3A3A3;
-	font-size: 20px;
-	font-family: "Agency FB";
-	font-weight: Bold;
-	Color: #FFFFFF;
-}
-.thumbnails {
-	width: 25%;
-	text-align: center;	
-	float: left;
-	margin-top: 35px;
-}
-.PersonalHeader3 {
-	margin-top: -35px;
-	height: 75px;
-	text-align: left;
-	background-color: #FFFFFF;
-}
-
-.PersonalHeader3 p {
-	font-size: 30px;
-	text-align: left;
-	line-height: 75px;
-	color: #14C2C9;
-	font-family: "Agency FB";
-	font-weight: Bold;
-	margin-left: 25px;
-}
- .iframe-container{
-  position: relative;
-  width: 25%;
-  margin: 0 auto;
-  display: block;  
-  border-radius: 20px;
-  padding-bottom: 20%;
-  margin-top: 50px;
-  margin-bottom: 90px;
-  height: 65%;
-  border: none
-}
-.iframe-container iframe{
-  position: absolute;
-  top:0;  
-  border-radius: 20px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none
-}
-.videop {
-	border-radius: 20px;
-	width: 70%; 
-	height: 70%;
-}
-
-.videop2 {
-	border-radius: 20px;
-	width: 60%;
-}
-
-.thumbnails2 {
-	width: 50%;
-	text-align: center;	
-	float: left;
-	margin-top: 35px;
-}
-.gallery .thumbnails2 h4 {
-	margin-top: 5px;	
-	font-weight: Bold;
-	margin-right: 5px;
-	margin-bottom: 5px;
-	margin-left: 5px;
-	color: #14C2C9;
-	font-family: "Agency FB";
-	font-size: 30px;
-}
-.gallery .thumbnails2 p {
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	color: #A3A3A3;
-	font-size: 20px;
-	font-family: "Agency FB";
-	font-weight: Bold;
-	Color: #FFFFFF;
-}
-.DesignTh2 {
-	width: 80%;
-	border-radius: 30px;
-}
-
-.iframe-container2 {
-  position: relative;
-  width: 35%;
-  margin: 0 auto;
-  display: block;  
-  border-radius: 20px;
-  padding-bottom: 20%;
-  margin-top: 50px;
-  margin-bottom: 90px;
-  height: 65%;
-  border: none
-}
-
-.iframe-container2 iframe{
-  position: absolute;
-  top:0;  
-  border-radius: 20px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none
-}iframe {
-	
-}
-
-.thumbnails3 {
-	width: 25%;
-	text-align: center;	
-	float: left;
-	margin-top: 35px;
-}
-
-.gallery .thumbnails3 h4 {
-	margin-top: 5px;	
-	font-weight: Bold;
-	margin-right: 5px;
-	margin-bottom: 5px;
-	margin-left: 5px;
-	color: #14C2C9;
-	font-family: "Agency FB";
-	font-size: 30px;
-}
-
-.gallery .thumbnails3 p {
-	margin-top: 0px;
-	margin-right: 25px;
-	margin-bottom: 0px;
-	margin-left: 25px;
-	color: #A3A3A3;
-	font-size: 20px;
-	font-family: "Agency FB";
-	font-weight: Bold;
-	Color: #FFFFFF;
-}
-
-.gallery2 {
-	display: inline-block;
-	width: 100%;
-	background-color: #20222A;
-	padding-bottom: 0px;
-	padding-top: 50px;
-	padding-bottom: 40px;
-	margin-bottom: 0px;
-}
-.gallery2 .thumbnails h4 {
-	margin-top: 5px;	
-	font-weight: Bold;
-	margin-right: 5px;
-	margin-bottom: 5px;
-	margin-left: 5px;
-	color: #14C2C9;
-	font-family: "Agency FB";
-	font-size: 30px;
-}
-.gallery2 .thumbnails p {
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	color: #A3A3A3;
-	font-size: 20px;
-	font-family: "Agency FB";
-	font-weight: Bold;
-	Color: #FFFFFF;
-}
-
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Simple Theme</title>
-<link href="css/multiColumnTemplate.css" rel="stylesheet" type="text/css">
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -799,493 +756,121 @@ p {
     <![endif]-->
 </head>
 <body>
-<div class="container">
-  <header>
-    <nav class="secondary_header" id="menu">
-      <ul>		  
-        <li>ABOUT ME</li>
-        <li>GAMES</li>
-        <li>PERSONAL</li>
-        <li>AUDIO</li>
-        <li>PROGRAMMING</li>
-        <li>LINKS</li>
-      </ul>
-    </nav>
-  </header>
-  <section>
-	<div class="BImage">
-    <div class="FImage">
-	<div class="midcontainer">
-		<h3>JT FRANGIOSA</h3>
-	</div>
-	<div class="lowercontaner">
-		<h6>I am an Audio, Programming and Design Engineer from Pennsylvania. On this website, you can find my various works from all disciplines. </h6>
-	</div>
-	</div>
+<!-- Main Container -->
+<div class="container"> 
+  <!-- Navigation -->
+<section class="hero" id="hero">
+  <img src="36527062_427517694382658_6800018456134549504.png" style="width:240px;height:240px;" class="sett">
+    <h2 class="hero_header">HELLO I'M JT;</h2>
+    <p class="tagline"></p>
+  </section>
+  <!-- Hero Section -->
+
+<div class="containerform">
+		<ul id="autoWidth" class="cs-hidden">			
+			<li class="item-a">
+			<a href="BTM.html">
+			<div class="box">
+					<img src="Untitled_Artwork (9).png" class="models2" >
+						<img src="/Library_Capsule.png" class="model" >
+				<div class="details">
+				<img src="Untitled_Artwork (3).png" class="logor">
+				
+					<p>Project Lead/Owner of this Steam title that launched in July of 2020.
+					Integrated Audio from Wwise into the project, along with programming the games UI and skills.
+					</p>
+				</div>
+			
+				</div>
+				</a>
+			</li>
+			<li class="item-a">
+			<a href="LAW.html">
+			<div class="box">
+				<img src="Untitled_Artwork (7).png" class="models" >
+					<img src="BoxART.jpg" class="model" >
+				<div class="details">
+				<img src="Untitled_Artwork (12).png" class="logor">
+					<p>A MOBA style game, that launched at PAX East 2019. Worked on Networking Code, and programmed all 15 abilities along with health/stamina bars.
+					</p>
+				</div>
+				
+					</div>
+				</a>
+			</li>
+			
+			<li class="item-a">
+			<a href="personal.html">
+			<div class="box">
+					<img src="Untitled_Artwork (8).png" class="models3" >
+						<img src="36527062_427517694382658_6800018456134549504.png" class="model" >
+				<div class="details">
+				<img src="Untitled_Artwork (11).png" class="logor">
+					<p> You can contact me here, along with find my certifications and resume here.
+					</p>
+				</div>
+				
+					</div>
+				</a>
+			</li>
+		<li class="item-a">
+			<a href="audio.html">
+			<div class="box">
+				
+				<img src="Untitled-2.png" class="models4" >
+				
+						<img src="ABoxArt.jpg" class="model" >
+				<div class="details">
+				<img src="Boombox.png" class="logor">
+					<p>Find my Audio work, from VFX's to Soundtracks to Voiceover Edits.
+					</p>
+				</div>
+				
+					</div>
+				</a>
+			</li>
+			<li class="item-a">
+			<a href="projects.html">
+			<div class="box">
+				<img src="Untitled-1k.png" class="models5" >
+						<img src="Untitled_Artwork (6).png" class="model" >
+				<div class="details">
+				<img src="Untitled_Artwork (10).png" class="logor">
+					<p>Here you can find screenshots of my programming work, and videos of their functionality, and mechanics.
+					</p>
+				</div>
+				
+					</div>
+				</a>
+			</li>
+	
+	
 	
 	</div>
-    <h2 class="noDisplay">Main Content</h2>
-    <article class="left_article">
-      <h3>ABOUT ME</h3>
-      <p>My passion for game development started as a child when I played games on the Sega Genesis with my father. I always wondered how these games were made. This passion I found ended up turning into a life career for me, and it made me think about what I wished to do with my life. Below you can find a copy of my résumé and the series of different works I have done related to game development, programming, and audio.</p>
-      <div class="photo">
-		  <img src="SkillList.png" alt="" width="400" height="200" class="placeholder"/>
-	  </div>
-    </article>
-    <aside class="right_article"><img src="IMG-53457.png" alt="" width="400" height="200" class="placeholder"/> </aside>
-  </section>
-  <div class="row">
-	  <div class="PersonalHeader2">
-	  <p>Games:</p>
-  </div>
-    <div class="columns">
-      <p class="thumbnail_align"></p>      
-    </div>
-    <div class="columns">
-      <p class="thumbnail_align"> <img src="Enemies.png" alt="" class="thumbnail"/> </p>
-	  <p class="thumbnail_align"> <img src="../Unnamed1/Untitled-1.png" alt="" class="thumbnail1"/> </p>
-	  <h4>BEAT THE MACHINE: REBOOTED</h4>
-      <p>Project Lead/Owner of this startup Steam title. The Beta of this game was launched in July of 2020, with the full game releasing in April of 2022. I was responsible for the Soundtrack, SFX, User Interface and User Experience.</p>
-    </div>
-    <div class="columns">
-      <p class="thumbnail_align"> <img src="Untitled_Artwork (12).png" alt="" class="thumbnail"/> </p>
-	  <p class="thumbnail_align"> <img src="BoxART.jpg" alt="" class="thumbnail1"/> </p>	
-      <h4>LEGENDS AND WARFARE</h4>
-      <p>A MOBA style game, that launched at PAX EAST 2019. Worked on the networking code, and programmed all 15 character abilites along with the username, password functionalities and character data.</p>
-    </div>
-    <div class="columns">
-      <p class="thumbnail_align"></p>
-    </div>
-  </div>
-  <div class="PersonalHeader">
-	  <p>Personal:</p>
-  </div>
-  <div class="row2">
-    <div class="columns2">
-      <p class="thumbnail_align"> </p>
-	  <p class="thumbnail_align"> <img src="JT_UpdatedResume.png" alt="" class="thumbnail2"/> </p>	  
-    </div>
-    <div class="columns2">
-      <p class="thumbnail_align"> <img src="thumbnail.jpg" alt="" class="thumbnail2"/> </p>
-	  <p class="thumbnail_align"> <img src="thumbnail (1).jpg" alt="" class="thumbnail2"/> </p>      
-    </div>    
-  </div>
-  <div class="PersonalHeader2">
-	  <p>Audio:</p>
-  </div>
-  <div class="PersonalHeader3">
-	  <p>SFX:</p>
-  </div>
-  <div class="gallery">	
-  <div class="thumbnails">
-    <h3 class="">
-    <audio controls>
-		  <source src ="HullMending.wav" type="audio/wav">
-	  </audio>
-	  </h3>
-      <h4>BTM:R - SFX - Rampant Regeneration</h4>
-      <p>Custom sound effect for a healing over time spell.</p>
-    </div>
-	<div class="thumbnails">
-    <h3 class="">
-    <audio controls>
-		  <source src ="Afterburner.wav" type="audio/wav">
-	  </audio>
-	  </h3>
-      <h4>BTM:R - SFX - Afterburner</h4>
-      <p>A foley sound, turned into an ability post-effect.</p>
-    </div>
-	  <div class="thumbnails">
-    <h3 class="">
-    <audio controls>
-		  <source src ="DoomBladeCast.wav" type="audio/wav">
-	  </audio>
-	  </h3>
-      <h4>BTM:R - SFX - Doom Blades</h4>
-      <p>A spinning sawblade that launches upon activation.</p>
-    </div>
-	  <div class="thumbnails">
-    <h3 class="">
-    <audio controls>
-		  <source src ="KickStarter.wav" type="audio/wav">
-	  </audio>
-	  </h3>
-      <h4>BTM:R - SFX - Kickstarter</h4>
-      <p>A sound effect for a powerful knockback attack.</p>
-    </div>
-	<div class="thumbnails">
-    <h3 class="">
-    <audio controls>
-		  <source src ="RegenSH.wav" type="audio/wav">
-	  </audio>
-	  </h3>
-      <h4>BTM:R - SFX - Protection Screen</h4>
-      <p>Generate a shield over a quick duration.</p>
-    </div>
-	<div class="thumbnails">
-    <h3 class="">
-    <audio controls>
-		  <source src ="BTM - EngineBurst.wav" type="audio/wav">
-	  </audio>
-	  </h3>
-      <h4>BTM:R - SFX - Engine Burst</h4>
-      <p>A massive explosion, dealing extreme damage to all nearby units.</p>
-    </div>
-	  <div class="thumbnails">
-    <h3 class="">
-    <audio controls>
-		  <source src ="WaterWhipTripleStrike.wav" type="audio/wav">
-	  </audio>
-	  </h3>
-      <h4>SFX - Water Whip Triple Strike</h4>
-      <p>A foley sound I made using tubing, water sound altered from weaponizer.</p>
-    </div>
-	  <div class="thumbnails">
-    <h3 class="">
-    <audio controls>
-		  <source src ="SciFiSniperx.wav" type="audio/wav">
-	  </audio>
-	  </h3>
-      <h4>SFX - Sniper Sound</h4>
-      <p>A sound effect I made using a Soda Can as the primary noise.</p>
-    </div>
-	  <div class="thumbnails">
-    <h3 class="">
-    <audio controls>
-		  <source src ="HardDrive1.wav" type="audio/wav">
-	  </audio>
-	  </h3>
-      <h4>BTM:R - SFX - Hard Drive Boss 1</h4>
-      <p>Dodge the Laser Cones!</p>
-    </div>
-	<div class="thumbnails">
-    <h3 class="">
-    <audio controls>
-		  <source src ="HardDriveLOL.wav" type="audio/wav">
-	  </audio>
-	  </h3>
-      <h4>BTM:R - SFX - Hard Drive Boss 2</h4>
-      <p>Shotgun sound for Phase 3.</p>
-    </div>
-	  <div class="thumbnails">
-    <h3 class="">
-    <audio controls>
-		  <source src ="HardDriveCenter.wav" type="audio/wav">
-	  </audio>
-	  </h3>
-      <h4>BTM:R - SFX - Hard Drive Boss 3</h4>
-      <p>Shield is down. Shoot at it!</p>
-    </div>
-	  <div class="thumbnails">
-    <h3 class="">
-    <audio controls>
-		  <source src ="HardDriveLaser.wav" type="audio/wav">
-	  </audio>
-	  </h3>
-      <h4>BTM:R - SFX - Hard Drive Boss 4</h4>
-      <p>Maneuver through the lasers.</p>
-    </div>
-  </div>
-<div class="PersonalHeader3">
-	  <p>Soundtracks:</p>
-  </div>
-<div class="gallery">	
-  <div class="thumbnails">
-    <h3 class="">
-    <audio controls>
-		  <source src ="Egyptian 5 Hour Challenge_Master.wav" type="audio/wav">
-	  </audio>
-	  </h3>
-      <h4>OST - Pyramid Park</h4>
-      <p>Egyptian Club - Themed Track</p>
-    </div>
-	<div class="thumbnails">
-    <h3 class="">
-    <audio controls>
-		  <source src ="BTM9NEW_Master.wav" type="audio/wav">
-	  </audio>
-	  </h3>
-      <h4>OST - Industrial Mines</h4>
-      <p>Outdoor Crystal Mines</p>
-    </div>
-	  <div class="thumbnails">
-    <h3 class="">
-    <audio controls>
-		  <source src ="BTM - SONG5_Master.wav" type="audio/wav">
-	  </audio>
-	  </h3>
-      <h4>OST - Haunted Cathedral</h4>
-      <p>Travel through this haunted Cathedral, don't get caught by a ghost.</p>
-    </div>
-	  <div class="thumbnails">
-    <h3 class="">
-    <audio controls>
-		  <source src ="BTM160BPMremake_Master.wav" type="audio/wav">
-	  </audio>
-	  </h3>
-      <h4>OST - Intergalatic Highway</h4>
-      <p>A remix of my Original Soundtrack - BTM:R Assembly Circuit</p>
-    </div>
-	  <div class="thumbnails">
-    <h3 class="">
-    <audio controls>
-		  <source src ="Kydraxna.wav" type="audio/wav">
-	  </audio>
-	  </h3>
-      <h4>OST - Kydraxna</h4>
-      <p>Rainforest excursion, life detected.</p>
-    </div>
-	<div class="thumbnails">
-    <h3 class="">
-    <audio controls>
-		  <source src ="Hype.wav" type="audio/wav">
-	  </audio>
-	  </h3>
-      <h4>OST - Hype Haven</h4>
-      <p>Opening song to get hype for a stream.</p>
-    </div>
-	  <div class="thumbnails">
-    <h3 class="">
-    <audio controls>
-		  <source src ="" type="audio/wav">
-	  </audio>
-	  </h3>
-      <h4></h4>
-      <p></p>
-    </div>
-	  <div class="thumbnails">
-    <h3 class="">
-    <audio controls>
-		  <source src ="" type="audio/wav">
-	  </audio>
-	  </h3>
-      <h4></h4>
-      <p></p>
-    </div>
-  </div>
-<div class="PersonalHeader3">
-	  <p>Beat the Machine: Rebooted - OST - All Tracks created by JT Frangiosa (me).</p>
-  </div>
-<div class="iframe-container">
-  <iframe src="//www.youtube.com/embed/COPgQ13iTlo" allowfullscreen></iframe>
-</div>
-<div class="PersonalHeader3">
-	  <p>Voice Overs:</p>
-  </div>
-	<div class="gallery">	
-  <div class="thumbnails">
-    <h3 class="">
-    <audio controls>
-		  <source src ="BTM_OBJ_Logan4.wav" type="audio/wav">
-	  </audio>
-	  </h3>
-      <h4>VO - BTM:R - Logan - Level Complete</h4>
-      <p>One of the level successful lines.</p>
-    </div>
-	<div class="thumbnails">
-    <h3 class="">
-    <audio controls>
-		  <source src ="BTM_Level1_Logan_Line08.wav" type="audio/wav">
-	  </audio>
-	  </h3>
-      <h4>VO - BTM:R - Logan - Tutorial</h4>
-      <p>One of the tutorial lines from Beat the Machine: Rebooted</p>
-    </div>
-	  <div class="thumbnails">
-    <h3 class="">
-    <audio controls>
-		  <source src ="BTM_Level12_TOM01.wav" type="audio/wav">
-	  </audio>
-	  </h3>
-      <h4>VO - BTM:R - T.O.M - Level 12 Entry</h4>
-      <p>The launcher is introduced. Sound leftover for timing purposes.</p>
-    </div>
-	  <div class="thumbnails">
-    <h3 class="">
-    <audio controls>
-		  <source src ="BTM_Level5_Tom_CCF.wav" type="audio/wav">
-	  </audio>
-	  </h3>
-      <h4>VO - BTM:R - T.O.M - Level 5 (First Boss)</h4>
-      <p>The Cooling Fan awaits destruction.</p>
-    </div>
-		  <div class="thumbnails">
-    <h3 class="">
-    <audio controls>
-		  <source src ="BTM_OBJ_Logan1.wav" type="audio/wav">
-	  </audio>
-	  </h3>
-      <h4>VO - BTM:R - Logan - Level Complete 2</h4>
-      <p>Nice Shooting Completion Line - Complete with perfect Voice Crack.</p>
-    </div>
 
-	  
-  </div>
-<div class="PersonalHeader3">
-<p>WWise:</p>
+  <!-- About Section -->
+  <section class="footer_banner">
+    <h2 class="hidden">Footer Banner Section </h2>
+	  <h4 class="footer_bannr">ABOUT ME</h4>
+	  <h5></h5>
+    <p class="footer_bannr">My passion for game development started as a child when I played games on the Sega Genesis with my father. I always wondered how these games were made. This passion I found ended up turning into a life career for me, and it made me think about what I wished to do with my life. Below you can find a copy of my résumé and the series of different works I have done related to game development, programming, and audio.</p>
+  </section>
+  <section class="hero">
+	  <img src="SkillList.png" style="width:60%"; class="sett">
+  </section>
+  <!-- Stats Gallery Section -->
+  <!-- Parallax Section -->
+  <!-- Footer Section -->
+  <section class="footer_banner" id="contact">
+    <h2 class="hidden">Footer Banner Section </h2>
+    <p class="hero_header">FOR THE LATEST NEWS &amp; UPDATES</p>	
+	<form>
+		<input type="button" value="LinkedIn" class="button" onclick="window.location.href='https://www.linkedin.com/in/jtfrangiosa/'" />
+	</form>
+  </section>
+  <!-- Copyrights Section -->
+  <div class="copyright">2021 - <strong>JT FRANGIOSA</strong></div>
 </div>
-<div class="gallery">	
-  <div class="thumbnails3">
-	 <div class="thumbnail_align"> <img src="WwiseScreenshot1.png" alt="" class="DesignTh2">
-      <h4>BTM:R - Dialogue - Organization</h4>
-	  <p>Each of the character's dialogue is seperated into folders to easily find each dialogue line incase of issues / adjustments.</p>         
-    </div>
-	</div>
-	<div class="thumbnails3">
-	 <div class="thumbnail_align"> <img src="WwiseScreenshot2.png" alt="" class="DesignTh2">
-      <h4>BTM:R - Acidic Prime - Sound Library</h4>
-	  <p>The sound for each stack of Acidic Prime, goes through a scale of pitches to indicate the power. The number of stacks an enemy has is saved in game and is sent to Wwise to play the correct sound corresponding to the number of stacks.</p>
-    </div>
-	</div>
-	<div class="thumbnails3">
-	 <div class="thumbnail_align"> <img src="WwiseScreenshot3.png" alt="" class="DesignTh2">
-      <h4>BTM:R - Boss Sounds</h4>
-	  <p>Boss Sounds are seperated into folders to keep them organized. Sounds are played when bosses enter 'phases'. Sounds stay active till a new 'phase' is entered or until end of animation.</p>         
-    </div>
-	</div>
-	<div class="thumbnails3">
-	 <div class="thumbnail_align"> <img src="WwiseScreenshot4.png" alt="" class="DesignTh2">
-      <h4>BTM:R - Music</h4>
-	  <p>Each Music Soundtrack is broken up into each instrument so we have the ability to dynamically change it based on area's entered. Entering a difficult room? Let's add some bass!</p>         
-    </div>
-	</div>
-</div>
-<div class="PersonalHeader3">
-	  <p>Trailers:</p>
-  </div>
-	<div class="iframe-container2">
-  <iframe src="//www.youtube.com/embed/RSTUqyh3Sdg" allowfullscreen></iframe>
-</div>
-	<div class="iframe-container2">
-  <iframe src="//www.youtube.com/embed/9DFjWB_gVXs" allowfullscreen></iframe>
-</div>
-<div class="PersonalHeader2">
-	  <p>Programming:</p>
-  </div>
-<div class="gallery2">	
-  <div class="thumbnails">
-    <h3 class="">
-    <video controls class="videop">
-		  <source src ="1d4d4d6b3748c4765ccfb01985eea35c.mp4" type="video/mp4">
-	  </video>
-	  </h3>
-      <h4>L.A.W - Tank Ability 1 (Stamina Boost)</h4>
-	  <p>The tank gains a 25% Movement Speed boost while aiming down the sights</p>
-	  <p>for 1.1-2 seconds based on character level.<br>
-         Cooldown: 6 Seconds.</p>
-    </div>
-	<div class="thumbnails">
-    <h3 class="">
-    <video controls class="videop">
-		  <source src ="bef8b69f19da388ae5bcfe976cd74e58.mp4" type="video/mp4">
-	  </video>
-	  </h3>
-      <h4>L.A.W - Tank Ability 2 (Regeneration)</h4>
-	  <p>The tank regains health over a short time, <br>
-		the lower health you have, the more you regenerate.<br>
-         Cooldown: 11 Seconds.</p>
-    </div>
-	  <div class="thumbnails">
-    <h3 class="">
-    <video controls class="videop2">
-		  <source src ="f6b14eca241e4e10caef6c1f5ecb9451.mp4" type="video/mp4">
-	  </video>
-	  </h3>
-      <h4>L.A.W - Assault Ability (Ultimate) - (C4 Explosion)</h4>
-      <p>The assault class spawns a C4 Grenade that explodes after 2.5 seconds<br>
-	  <p>or after recasting<br>
-	Cooldown: 60 Seconds.</p>
-    </div>
-	   <div class="thumbnails">
-    <h3 class="">
-    <video controls class="videop2">
-		  <source src ="../Unnamed1/Teaser6.mp4" type="video/mp4">
-	  </video>
-	  </h3>
-      <h4>BTMR: Rocket Mayhem - Skill Teaser</h4>
-		   <p>Video, programming and all sounds created by me.</p>
-    </div>
-	</div>
-	<div class="gallery">	
-  <div class="thumbnails">
-    <h3 class="">
-    <video controls class="videop2">
-		  <source src ="../Unnamed1/Teaser3.mp4" type="video/mp4">
-	  </video>
-	  </h3>
-      <h4>BTMR: Protection Screen - Skill Teaser</h4>
-	  <p>Video, programming and all sounds created by me.</p>
-    </div>
-	<div class="thumbnails">
-    <h3 class="">
-    <video controls class="videop2">
-		  <source src ="../Unnamed1/Teaser7.mp4" type="video/mp4">
-	  </video>
-	  </h3>
-      <h4>BTMR: Nano Tornado - Skill Teaser</h4>
-	  <p>Video, programming and all sounds created by me.</p>
-    </div>
-	  <div class="thumbnails">
-    <h3 class="">
-    <video controls class="videop2">
-		  <source src ="../Unnamed1/Teaser.mp4" type="video/mp4">
-	  </video>
-	  </h3>
-      <h4>BTMR: Automated XV9 BOT - Skill Teaser</h4>
-	  <p>Video, programming and all sounds created by me.</p>
-    </div>
-	   <div class="thumbnails">
-    <h3 class="">
-    <video controls class="videop2">
-		  <source src ="../Unnamed1/Teaser8.mp4" type="video/mp4">
-	  </video>
-	  </h3>
-      <h4>BTMR: Engine Burst - Skill Teaser</h4>
-	  <p>Video, programming and all sounds created by me.</p>
-    </div>
-	</div>
-<div class="PersonalHeader2">
-	  <p>Design:</p>
-  </div>
-<div class="gallery">	
-  <div class="thumbnails2">
-	 <div class="thumbnail_align"> <img src="../Unnamed1/983c91dbe9bb1950ea22d4c2fc65ec31.jpg" alt="" class="DesignTh2">
-      <h4>BTM:R - Skill Tree - User Interface</h4>
-	  <p>The user interface for the main mechanic of BTM: R, the skill tree. Players choose their way to play with over 5,000,000 combinations of skills. <br>
-		What's your favorite way to defeat T.O.M's hoard?</p>         
-    </div>
-	</div>
-	<div class="thumbnails2">
-	 <div class="thumbnail_align"> <img src="PlayerUI.png" alt="" class="DesignTh2">
-      <h4>BTM:R - Player User Interface</h4>
-	  <p>The main user interface for BTM:R all stats, health and shield are clear and visible to the player. <br>
-	Objective Tracker tells players what needs to be completed in the level they have chosen to play.(Shown Top Right) <br>
-Tips show up after the player has died at least 5 times. (Shown Left)</p>
-    </div>
-	</div>
-	<div class="thumbnails2">
-	 <div class="thumbnail_align"> <img src="GarageUI.png" alt="" class="DesignTh2">
-      <h4>BTM:R - Garage Skin Selection</h4>
-		 <p>User Interface for choosing the player skin, all changes are aesthetic only.</p>
-    </div>
-	</div>
-	<div class="thumbnails2">
-	 <div class="thumbnail_align"> <img src="PauseMenuUI.png" alt="" class="DesignTh2">
-      <h4>BTM:R - Pause Menu UI</h4>
-		 <p>User Interface for pausing, options, map and more.</p>
-    </div>
-	</div>
-	</div>
-  <div class="social">
-    <a href="https://www.linkedin.com/in/jtfrangiosa/" class="social_icon"><img src="1200px-Instagram-Icon.png" alt="HTML tutorial" class="thumbnail" width="100"></a>
-	  <a href="https://www.linkedin.com/in/jtfrangiosa/" class="social_icon"><img src="Twitter-logo.png" alt="HTML tutorial" class="thumbnail" width="100"></a>
-	  <a href="https://www.linkedin.com/in/jtfrangiosa/" class="social_icon"><img src="1384060.png" alt="HTML tutorial" class="thumbnail" width="100"></a>
-	   <a href="https://www.linkedin.com/in/jtfrangiosa/" class="social_icon"><img src="LinkedIn_logo_initials.png" alt="HTML tutorial" class="thumbnail" width="100"></a>
-  </div>
-  <footer class="secondary_header footer">
-    <div class="copyright">&copy;2019 - <strong>SIMPLE Theme</strong></div>
-  </footer>
-</div>
+<!-- Main Container Ends -->
 </body>
 </html>
-
