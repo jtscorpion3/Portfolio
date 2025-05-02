@@ -1311,7 +1311,8 @@ ol {
   padding-bottom: 0%;
   margin-top: 50px;
   margin-bottom: 10px;
-  height: 55%;
+  min-height: 260px;
+  max-height: 260px;
   border: none
 }
 .portfolio__item__video .play-btn {
