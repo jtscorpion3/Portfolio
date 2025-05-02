@@ -1303,17 +1303,16 @@ ol {
 }
 
 .portfolio__item__video {
-  height: 240px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 28px;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  display: block;  
+  border-radius: 20px;
+  padding-bottom: 0%;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  height: 55%;
+  border: none
 }
 .portfolio__item__video .play-btn {
   display: inline-block;
