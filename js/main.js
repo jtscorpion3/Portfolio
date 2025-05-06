@@ -62,12 +62,14 @@
         dots: true,
         mouseDrag: false,
         animateOut: 'fadeOut',
+		autoplayTimeout: 10000,
         animateIn: 'fadeIn',
         items: 1,
         margin: 0,
-        smartSpeed: 1200,
+        smartSpeed: 500,
         autoHeight: false,
         autoplay: true,
+		duration: 10000,
     });
 
     var dot = $('.hero__slider .owl-dot');
@@ -88,8 +90,9 @@
         margin: 0,
         items: 3,
         dots: true,
+		autoplayTimeout: 10000,
         dotsEach: 2,
-        smartSpeed: 1200,
+        smartSpeed: 500,
         autoHeight: false,
         autoplay: true,
         responsive: {
@@ -114,6 +117,7 @@
         items: 3,
         dots: true,
         dotsEach: 2,
+		autoplayTimeout: 10000,
         smartSpeed: 1200,
         autoHeight: false,
         autoplay: true,
@@ -139,6 +143,7 @@
         items: 6,
         dots: false,
         smartSpeed: 1200,
+		autoplayTimeout: 10000,
         autoHeight: false,
         autoplay: true,
         responsive: {
@@ -171,7 +176,7 @@
         $(this).prop('Counter', 0).animate({
             Counter: $(this).text()
         }, {
-            duration: 4000,
+            duration: 10000,
             easing: 'swing',
             step: function (now) {
                 $(this).text(Math.ceil(now));
